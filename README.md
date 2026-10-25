@@ -141,14 +141,6 @@ Die Liste umfasst unter anderem Daten aus den Bereichen Mobilität, Wohnen, Stad
 
 **Quelle:** [Ergebnisse und Ableitungen der OpenData-Abfrage – Sitzungsvorlage V 05865](https://www.muenchen-transparent.de/dokumente/7132160)
 
-### 2025: Hochwertige Datensätze identifizieren
-
-Im Oktober 2025 beschloss München einen weiteren Ansatz zur Identifikation besonders relevanter Datensätze. Dabei wird ausdrücklich auf das Projekt „Berlins Kerndatensätze“ Bezug genommen.
-
-**Quelle:** [Hochwertige Datensätze identifizieren – Sitzungsvorlage V 17861](https://www.muenchen-transparent.de/dokumente/9285003)
-
-Die Bestandsaufnahme von 2022 ist allerdings nicht mit einer offiziellen Priorisierung hochwertiger Datensätze gleichzusetzen.
-
 ## Datensatzübersicht
 
 Die Untersuchung erfasst für jeden der 96 Einträge:
