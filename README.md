@@ -31,7 +31,7 @@ Die 96 Einträge sind außerdem **keine 96 getrennten Dateien**: Mehrere Einträ
 Die vollständige Tabelle verbindet die Liste der Stadtverwaltung von 2022 mit der Einschätzung der Verfügbarkeit zum 25. Oktober 2026. Statusdefinitionen und Belegstufen stehen in der [Methodik](METHODIK.md); die Tabelle wird automatisch aus den CSV-Dateien erzeugt.
 
 <!-- TABELLE:ANFANG -->
-| Nr. | Stelle (2022) | Datensatz / Datenangebot (2022) | Vermerk 2022 | Status 2026 | Einstufung im Detail | Rechercheanmerkung | Fundstelle | Lizenz |
+| # | Stelle | Datensatz / Datenangebot (2022) | Vermerk 2022 | Status 2026 | Einstufung im Detail | Rechercheanmerkung | Fundstelle | Lizenz |
 | ---: | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Baureferat | Öffentliche Spielplätze und Freizeitanlagen in München | Bestehenden Datensatz aktualisieren | 🟡 Teilweise verfügbar | 🟡 Teilweise | Öffentliche Spielplätze, CSV. Kein vollständiger Bestand sämtlicher Freizeitanlagen nachgewiesen. | [Link](https://opendata.muenchen.de/dataset/oeffentliche-spielplaetze-muenchen) | [DL-DE-BY 2.0](https://www.govdata.de/dl-de/by-2-0) |
 | 2 | Baureferat | Points of Interest an der Isar | Bestehenden Datensatz aktualisieren | ✅ Offen verfügbar | ✅ Offen | POIs an der südlichen Isar, CSV; räumlich auf die südliche Isar bezogen. | [Link](https://opendata.muenchen.de/dataset/points-of-interest-an-der-sudlichen-isar) | [DL-DE-BY 2.0](https://www.govdata.de/dl-de/by-2-0) |

@@ -59,7 +59,7 @@ def main() -> None:
         out.append(f"| {LABELS[s]} | {zaehler.get(s, 0)} |")
     out.append(f"| **Gesamt** | **{len(bewertung)}** |\n")
     tabelle = []
-    tabelle.append("| Nr. | Stelle (2022) | Datensatz / Datenangebot (2022) | Vermerk 2022 | Status 2026 | Einstufung im Detail | Rechercheanmerkung | Fundstelle | Lizenz |")
+    tabelle.append("| # | Stelle | Datensatz / Datenangebot (2022) | Vermerk 2022 | Status 2026 | Einstufung im Detail | Rechercheanmerkung | Fundstelle | Lizenz |")
     tabelle.append("| ---: | --- | --- | --- | --- | --- | --- | --- | --- |")
     for r in sorted(bewertung, key=lambda r: int(r["id"])):
         i = inventar[r["id"]]
