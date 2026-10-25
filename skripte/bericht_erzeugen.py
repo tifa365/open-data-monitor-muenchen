@@ -58,8 +58,9 @@ def main() -> None:
     for s in ORDER:
         out.append(f"| {LABELS[s]} | {zaehler.get(s, 0)} |")
     out.append(f"| **Gesamt** | **{len(bewertung)}** |\n")
-    out.append("| Nr. | Stelle (2022) | Datensatz / Datenangebot (2022) | Vermerk 2022 | Status 2026 | Einstufung im Detail | Rechercheanmerkung | Fundstelle | Lizenz |")
-    out.append("| ---: | --- | --- | --- | --- | --- | --- | --- | --- |")
+    tabelle = []
+    tabelle.append("| Nr. | Stelle (2022) | Datensatz / Datenangebot (2022) | Vermerk 2022 | Status 2026 | Einstufung im Detail | Rechercheanmerkung | Fundstelle | Lizenz |")
+    tabelle.append("| ---: | --- | --- | --- | --- | --- | --- | --- | --- |")
     for r in sorted(bewertung, key=lambda r: int(r["id"])):
         i = inventar[r["id"]]
         url = r.get("dataset_url", "").strip()
@@ -70,10 +71,11 @@ def main() -> None:
         lizenz = r.get("license", "").strip()
         lurl = r.get("license_url", "").strip()
         lizenz_md = f"[{md(lizenz)}]({lurl})" if lizenz and lurl else (md(lizenz) if lizenz else "–")
-        out.append(
+        tabelle.append(
             f"| {r['id']} | {md(i['provider_2022'])} | {md(i['dataset_title_2022'])} | {md(i['administrative_note_2022'])} "
             f"| {LABELS[r['status']]} | {md(r['status_detail'])} | {md(r['assessment_notes'])} | {fundstelle} | {lizenz_md} |"
         )
+    out.extend(tabelle)
     out.append(
         "\nQuellen: [Sitzungsvorlage V 05865 (2022)](https://www.muenchen-transparent.de/dokumente/7132160), "
         "[Sitzungsvorlage V 17861 (2025)](https://www.muenchen-transparent.de/dokumente/9285003). "
@@ -82,6 +84,20 @@ def main() -> None:
     ziel = ROOT / "berichte" / f"{STAND}.md"
     ziel.write_text("\n".join(out), encoding="utf-8")
     print(f"{ziel.relative_to(ROOT)} geschrieben: {len(bewertung)} Zeilen, {dict(zaehler)}")
+
+    # Dieselbe Tabelle zwischen den Markierungen in der README einsetzen.
+    readme = ROOT / "README.md"
+    text = readme.read_text(encoding="utf-8")
+    a, e = "<!-- TABELLE:ANFANG -->", "<!-- TABELLE:ENDE -->"
+    start, ende = text.find(a), text.find(e)
+    if start == -1 or ende == -1 or ende < start:
+        sys.exit("Markierungen TABELLE:ANFANG/TABELLE:ENDE in README.md nicht gefunden")
+    neu = text[: start + len(a)] + "\n" + "\n".join(tabelle) + "\n" + text[ende:]
+    if neu != text:
+        readme.write_text(neu, encoding="utf-8")
+        print("README.md aktualisiert")
+    else:
+        print("README.md unverändert")
 
 
 if __name__ == "__main__":
