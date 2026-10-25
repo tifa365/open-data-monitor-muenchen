@@ -18,14 +18,6 @@ Die ursprüngliche Liste wird mit dem öffentlich verfügbaren Datenangebot im O
 | ❌ Keine passende Quelle nachgewiesen           |      8 |
 | **Gesamt**                                     | **96** |
 
-Die Zahlen beruhen auf einer unabhängigen Recherche im Münchner Open-Data-Katalog, in den Geodiensten der Stadt und auf Fachseiten. Für jeden Eintrag mit Fundstelle ist die Datensatzseite oder der Dienst verlinkt. Lizenzen sind nach der Regel des Katalogs eingetragen (DL-DE-BY 2.0, für MVV- und MVG-Daten CC BY 4.0); wie belastbar die einzelne Angabe ist, hält eine Belegstufe je Zeile fest, Details in der [Methodik](METHODIK.md).
-
-„Heute verfügbar“ bedeutet nicht „Datenstand 2026“: Manche Dateien enden 2023 oder 2024. Öffentliche Sichtbarkeit, technische Abrufbarkeit und offene Lizenz sind drei verschiedene Dinge. Gerade bei Familienangeboten, Jugendhilfe, Unterkünften und einigen Umweltkarten ist die technische Veröffentlichung weiter als die dokumentierte Freigabe zur Weiterverwendung.
-
-Ein Datensatz gilt nicht bereits deshalb als offen, weil die entsprechenden Informationen auf einer Webseite oder in einem PDF öffentlich zugänglich sind.
-
-Die 96 Einträge sind außerdem **keine 96 getrennten Dateien**: Mehrere Einträge der Liste von 2022 (etwa die fünf GEWOFAG-Positionen oder die vier Tierpark-Kennzahlen) werden heute in jeweils einem einzigen Datensatz veröffentlicht.
-
 ## Alle 96 Einträge im Überblick
 
 Die vollständige Tabelle verbindet die Liste der Stadtverwaltung von 2022 mit der Einschätzung der Verfügbarkeit zum 25. Oktober 2026. Statusdefinitionen und Belegstufen stehen in der [Methodik](METHODIK.md); die Tabelle wird automatisch aus den CSV-Dateien erzeugt.
